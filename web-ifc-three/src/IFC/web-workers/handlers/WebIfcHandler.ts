@@ -147,4 +147,8 @@ export class WebIfcHandler implements WebIfcAPI {
     async SetWasmPath(path: string): Promise<void> {
         return this.handler.request(this.API, WorkerActions.SetWasmPath, { path });
     }
+    
+    async GetExpressIdForIfcGuid(modelID: number, ifcGuid: string): Promise<number> {
+        return this.handle.request(this.API, WorkerActions.GetExpressIdForIfcGuid, { modelID, ifcGuid});
+    }
 }
