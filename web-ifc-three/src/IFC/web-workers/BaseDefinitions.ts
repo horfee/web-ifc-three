@@ -44,6 +44,7 @@ export enum WorkerActions {
     LoadAllGeometry = 'LoadAllGeometry',
     GetFlatMesh = 'GetFlatMesh',
     SetWasmPath = 'SetWasmPath',
+    GetExpressIdForIfcGuid = 'GetExpressIdForIfcGuid',
 
     // Parser
     parse = 'parse',
@@ -139,6 +140,7 @@ export interface WebIfcWorkerAPI extends BaseWorkerAPI {
     [WorkerActions.LoadAllGeometry]: IfcWorkerEventHandler;
     [WorkerActions.GetFlatMesh]: IfcWorkerEventHandler;
     [WorkerActions.SetWasmPath]: IfcWorkerEventHandler;
+    [WorkerActions.GetExpressIdForIfcGuid]: IfcWorkerEventHandler;
 }
 
 export interface SerializedVector {
