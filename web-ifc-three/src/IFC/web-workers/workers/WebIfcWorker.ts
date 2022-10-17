@@ -176,7 +176,7 @@ export class WebIfcWorker implements WebIfcWorkerAPI {
         this.worker.post(data);
     }
     
-    GetExpressIdForIfcGuid(data: IfcEventData): number  {
+    GetExpressIdForIfcGuid(data: IfcEventData) {
         const expressID = this.webIFC.GetExpressIdForIfcGuid(data.args.modelID, data.arg.ifcGuid);
         data.result = expressID;
         this.worker.post(data);

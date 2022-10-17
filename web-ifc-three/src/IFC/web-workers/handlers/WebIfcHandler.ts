@@ -149,6 +149,6 @@ export class WebIfcHandler implements WebIfcAPI {
     }
     
     async GetExpressIdForIfcGuid(modelID: number, ifcGuid: string): Promise<number> {
-        return this.handle.request(this.API, WorkerActions.GetExpressIdForIfcGuid, { modelID, ifcGuid});
+        return this.handler.request(this.API, WorkerActions.GetExpressIdForIfcGuid, { modelID, ifcGuid});
     }
 }
