@@ -175,6 +175,12 @@ export class WebIfcWorker implements WebIfcWorkerAPI {
         this.webIFC.getSubArray(args.heap, args.startPtr, args.sizeBytes);
         this.worker.post(data);
     }
+    
+    GetExpressIdForIfcGuid(data: IfcEventData): number  {
+        const expressID = this.webIFC.GetExpressIdForIfcGuid(data.args.modelID, data.arg.ifcGuid);
+        data.result = expressID;
+        this.worker.post(data);
+    }
 
     private nullifyWebIfc() {
         // @ts-ignore
